@@ -1,0 +1,12 @@
+CREATE DATABASE bank_db;
+
+CREATE TABLE employees(
+    emp_id SERIAL PRIMARY KEY,
+    fname VARCHAR(100) NOT NULL,
+    lname VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    dept VARCHAR(100) ,
+    salary DECIMAL(10,2) DEFAULT 30000.00,
+    hire_date DATE NOT NULL DEFAULT CURRENT_DATE
+);
+
