@@ -10,3 +10,18 @@ SELECT * FROM employees WHERE salary BETWEEN 40000 AND 50000;
 
 --DISTINCT 
 SELECT DISTINCT dept FROM employees; 
+
+-- ORDER BY
+SELECT * FROM employees ORDER BY fname; --default ASC
+SELECT * FROM employees ORDER BY fname DESC;
+
+-- LIMIT
+SELECT * FROM employees LIMIT 3;
+
+-- LIKE
+SELECT * FROM employees WHERE fname LIKE 'A%';
+SELECT * FROM employees WHERE fname LIKE '%A';
+SELECT * FROM employees WHERE fname LIKE '%A%';
+
+SELECT * FROM employees WHERE fname LIKE '__'; -- It gives the two character 
+
