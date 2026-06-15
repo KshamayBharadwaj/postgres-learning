@@ -1,0 +1,17 @@
+-- 01 Find different types of departments in database ?
+SELECT dept AS Department_Name FROM employees GROUP BY dept;
+SELECT DISTINCT dept FROM employees; 
+
+-- 02 Display records with high-low salary 
+SELECT MAX(salary) AS "High Salary",MIN(salary) AS "Low Salary" FROM employees;
+
+-- 03 How to see only top 3 records from a table? 
+SELECT * FROM employees LIMIT 3;
+
+-- 04 Show records where first name start with letter 'A'
+SELECT fname FROM employees WHERE fname LIKE 'A%';
+
+-- 05 Show records where length of the lname is 4 characters
+
+SELECT lname FROM employees WHERE LENGTH(lname) = 4;
+SELECT lname FROM employees WHERE lname LIKE '____';
