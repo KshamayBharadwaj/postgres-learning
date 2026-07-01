@@ -23,3 +23,45 @@ CREATE TABLE ord_items(
 );
 
 
+-- Customers
+INSERT INTO customers (cust_name) VALUES
+('Max Verstappen'),
+('Lewis Hamilton'),
+('Charles Leclerc'),
+('Lando Norris'),
+('Fernando Alonso');
+
+
+-- Products
+INSERT INTO products (p_name, price) VALUES
+('F1 Cap', 1200.00),
+('Team T-Shirt', 2500.00),
+('Race Jacket', 5500.00),
+('Mini Helmet', 3500.00),
+('F1 Poster', 800.00);
+
+
+-- Orders
+INSERT INTO orders (ord_date, cust_id) VALUES
+('2026-08-01', 1),
+('2026-08-02', 2),
+('2026-08-03', 3),
+('2026-08-04', 1),
+('2026-08-05', 4);
+
+
+-- Order Items
+INSERT INTO ord_items (ord_id, p_id, quantity) VALUES
+(1, 1, 2),   -- Max: 2 F1 Caps
+(1, 4, 1),   -- Max: 1 Mini Helmet
+
+(2, 2, 1),   -- Lewis: 1 Team T-Shirt
+(2, 5, 2),   -- Lewis: 2 Posters
+
+(3, 3, 1),   -- Charles: 1 Race Jacket
+
+(4, 2, 2),   -- Max: 2 Team T-Shirts
+(4, 5, 1),   -- Max: 1 Poster
+
+(5, 1, 1),   -- Lando: 1 F1 Cap
+(5, 4, 1);   -- Lando: 1 Mini Helmet
