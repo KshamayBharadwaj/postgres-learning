@@ -65,3 +65,28 @@ INSERT INTO ord_items (ord_id, p_id, quantity) VALUES
 
 (5, 1, 1),   -- Lando: 1 F1 Cap
 (5, 4, 1);   -- Lando: 1 Mini Helmet
+
+
+SELECT * FROM customers c
+JOIN orders o 
+ON c.cust_id = o.cust_id
+JOIN ord_items oi
+ON oi.ord_id = o.ord_id
+JOIN products p
+ON  p.p_id = oi.p_id;
+
+SELECT 
+	c.cust_name,
+	o.ord_date,
+	p.p_name,
+	p.price,
+	oi.quantity,
+	(oi.quantity*p.price) AS total_price
+FROM ord_items oi
+	JOIN
+		products p ON oi.p_id=p.p_id
+	JOIN
+		orders o ON o.ord_id=oi.ord_id
+	JOIN
+		customers c ON o.cust_id=c.cust_id;
+
